@@ -1,2 +1,3 @@
 # CMSI-387
-Work for my CMSI-387: Operating Systems class.
+Ian Green; Megan Talbert; Jaboc Longo
+Work for CMSI-387: Operating Systems class.
