@@ -1,3 +1,3 @@
 # CMSI-387
-Ian Green; Megan Talbert; Jacob Longo
+Ian Green; Bitao Jin; Jacob Longo
 Work for CMSI-387: Operating Systems class.
