@@ -1,0 +1,37 @@
+
+
+Nice work on this!  Good that you are thinking ahead and defining constants
+and functions for your code and operations!
+
+I changed your file hierarchy structure to reflect what I had asked for on
+the syllabus page so that my scripts will work properly.  Sorry, and thanks.
+
+A couple of notes:
+
+   + usually the "#define" preprocessor directives come AFTER the "#include"
+      lines ~ not *required*, just a *convention*
+   + once a constant is defined, it isn't necessary to define another
+      variable to hold it unless you WANT to do that... it is fine to simply
+      write:
+
+         for(int i = LOWER_LIMIT; i <= UPPER_LIMIT; i++){
+
+   + it's no harm here, but one thing to consider is how much "overhead" it
+      takes to call a function.  For example, you can simply say "i * i" and
+      you will get the square without calling a function.  This may become
+      important in the future if you are optimizing.  Remember that when you
+      are multiplying a variable by itself it's a simple operation that loads
+      the values into registers and then multiplies them together.  But when
+      you are calling "square()" you are:
+          1. pushing the two values onto the stack
+          2. saving the registers and other states of the program at that point
+          3. jumping to the function entry point
+          4. popping the value off the stack for the function that is now in control
+          5. processing the values
+          6. pushing the return value onto the stack
+          7. calling the return function to pass back the value
+          8. popping the returned value off the stack
+          9. restoring the context of the original program
+         10. continuing with the computed value
+
+Nice job, though ~ your code looks EXCELLENT!
