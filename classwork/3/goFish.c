@@ -15,9 +15,9 @@ int main(int argc, char * argv[]){
         scanf("%d", &input[entryNumber]);
     }while( input[entryNumber++] != -9999 && entryNumber < INPUT_SIZE);
 
-    for(int i = 0; i < INPUT_SIZE; i++){
-        printf("%d: %d\n", i, input[i]);
-    }
+    // for(int i = 0; i < INPUT_SIZE; i++){
+    //     printf("%d: %d\n", i, input[i]);
+    // }
 
     if(entryNumber != INPUT_SIZE){
         input[--entryNumber] = 0; // Don't include the -9999
