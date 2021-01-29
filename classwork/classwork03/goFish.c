@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 #define INPUT_SIZE 25
 
@@ -6,9 +8,13 @@ int main(int argc, char * argv[]){
 
     int input[INPUT_SIZE],
         entryNumber = 0;
-    // not essential but nice
-    for(int i = 0 ; i < INPUT_SIZE; i++)
+    char buffer[10];
+    char inputString[INPUT_SIZE*11]; // guestimate on the size of the string needed
+    // not essential but nice to clear
+    for(int i = 0 ; i < INPUT_SIZE; i++){
         input[i]=0;
+        inputString[i] = 0;
+    }
     
     do{
         printf("\nEnter a number: ");
@@ -28,6 +34,21 @@ int main(int argc, char * argv[]){
     printf("\nSum: %d", sum);
     printf("\nCount of elements: %d", (entryNumber+1));
     printf("\nAverage: %f\n", ( ((float)sum)/((float)entryNumber+1) ));
+
+    for(int i = 0; i <= entryNumber; i++){
+        sprintf(buffer, "%d", input[i]);
+        strcat(inputString, buffer);
+    }
+
+    int sevenCounter = 0;
+    for(int i = 0; i <= entryNumber; i++){
+        if(inputString[i] == 0) break;
+        else if (inputString[i] == '7') sevenCounter++;
+    }
+
+    printf("%s\n", inputString);
+    printf("7 count: %d\n", sevenCounter);
+
     
 
 }
