@@ -1,5 +1,5 @@
 # Preliminary design
-##1.1 - Description of modification/addition to Linux
+## 1.1 - Description of modification/addition to Linux
 
 **Permanent Alias:** 
 
