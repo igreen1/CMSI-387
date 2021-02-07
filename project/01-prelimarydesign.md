@@ -9,12 +9,6 @@ The `alias` command currently only creates an alias while the bash terminal is o
 
  Temporarily add alias (during lifetime of bash terminal): `alias hello='echo'` 
 
-*Secondary Options*
-1. 'deep' mkdir: 
-The `mkdir` command currently cannot create a directory within a non-existent directory. For example to create `/test1/test2`, test1 must exist. We would change this to make `test1` automatically be created on hte command
-2. 'deep' touch: 
-This is the same idea as (2) but with touch for a file instead of mkdir
-
 ## 1.2 Rationale as to why this is a good idea, or what the good points of it are
 
 Usually when people use `alias` they want the command to be permanent. It is generally an important shortcut to their workflow. Many first-time Linux users assume the command permanently creates an alias, and this leads to unnecessary confusion. Although these new users will still have to learn the `-perm` command, it will save them the headache of editing `~/.bash_aliases` or the `~/.bashrc` file, which can be more difficult.
