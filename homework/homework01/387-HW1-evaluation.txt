@@ -1,0 +1,39 @@
+
+Evaluation for Homework 1
+CMSI 387 - Operating Systems
+============================
+
+Question 1: difference     -  1 point
+Question 2: relationship   -  1 point
+Question 3: topics         -  1 point
+Question 4a:               -  1 point
+Question 4b:               -  1 point
+Question 4c:               -  1 point
+Question 5 program:        -  1 point
+Question 5 print msg:      -  1 point
+Question 5 main kill:      -  1 point
+Question 6 shortest:       -  1 point
+Question 6 policy:         -  0 point
+Question 7 program         -  0.5 point
+
+Total possible points:     12 points
+           your score:     12 points
+       homework total:     10.5/12 = 87.5% which is a B-plus
+
+Nice work!
+
+Thanks for your input about security!  It is a most interesting and critical
+topic given the state of the world at present, and I was lucky enough to do
+some work with that at Boeing.  I'll do my best to include security in class
+as the semester continues.
+
+Nice presentation on the Gantt chart, but you seem to have omitted a few of
+the cases.  You should have 6 charts, showing all six possible combinations
+for the three threads.  The average turnaround times for each combination
+should be calculated, then the shortest of those used to determine the policy
+of the scheduler.  The policy determination is missing.
+
+You didn't follow the instructions for number 7.  You are supposed to output
+the data using a *SINGLE* printf() statement.  You have six of them.
+
+Otherwise, good job!
