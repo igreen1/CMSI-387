@@ -25,6 +25,6 @@ This difference could be attributed to caching. If the memory is sufficiently fa
 
  <img src="assignment2.assets/image-20210312104504558.png" alt="image-20210312104504558" style="zoom:60%;" /><img src="assignment2.assets/image-20210312104533688.png" alt="image-20210312104533688" style="zoom:60%;" />
 
-9. there are 8 processes running the program.
+9. there are 8 processes running the program. Each process splits after a 30 second wait (exponential growth by 2). Because each process has a slight delay in starting, however, there is a delay in when they split, shown in the figure. They are 'asyncrhonously' splitting. 
 
 ![image-20210312104159527](assignment2.assets/image-20210312104159527.png)
