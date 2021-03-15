@@ -1,0 +1,56 @@
+
+
+CMSI 387 Operating Systems
+Results for Homework #2 Evaluation
+   Ian, Bitao, and Jacob
+====================================
+
+Question 1 mutex reversing:          5/ 5 points
+
+Question 2 auditing code change:     5/ 5 points
+
+Question 3 test program:            20/20 points
+
+Question 4 notifyall() addition:    10/10 points
+
+Question 5a 2-phase locking:         5/ 5 points
+
+Question 5b short read locks:        3/ 5 points
+   In this question, it is not actually possible.  With read committed
+      isolation, the writes will have exclusive locks, so T1 will have
+      exclusive write access for the duration of the transaction.  Since
+      write locks are exclusive, in this case it's the same outcome as
+      with two-phase locking.  You make a good case, though....
+
+Question 5c snapshot isolation:      3/ 5 points
+   Again, not quite ~ it IS possible.  With snapshot isolation, the values
+      are written to DIFFERENT locations than the original storage, and
+      then later written back to the original location.  If T2 reads x
+      before that update write is done, and reads y AFTER that update write
+      is done, it would have two inconsistent values, the new value for x
+      and the old value for y.
+
+Question 6 virtual address xlate:    5/ 5 points
+
+Question 7 calc. explanation:        5/ 5 points
+
+Question 8 loop 4096 analysis:      20/20 points
+
+Question 9 fork() tree:             10/15 points
+
+Total 96 out of 100 = 96.00% which is an A
+
+Comments:
+---------
+Very nice work here!
+
+I like that you gave the addresses for problem 6 in both hex and decimal!
+
+EXCELLENT job with the analysis on problem 8.  I love the graph showing the
+various run times.
+
+Problem 9 is a nice way of showing that "tree" ~ a bit non-traditional which
+is a good thing!
+
+
+Keep up the good work!
