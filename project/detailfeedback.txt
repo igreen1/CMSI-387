@@ -1,0 +1,24 @@
+
+Ian Green, Bitao Jin, and Jacob Longo
+CMSI 387 Project Spring 2021
+Detailed Design Document
+Evaluation and Feedback
+======================================================
+
+'alias' mod ~ make an alias permanent from the command line
+
+Well done on this deliverable.  The diagram shows exactly what your program
+will do and is perfect in terms of communicating the idea and implementation.
+
+Looking forward to seeing this in action!
+
+Full credit earned.
+
+Semester so far:
+   homework01 87.50% * 10 points =  8.75 points
+   homework02 96.00% * 10 points =  9.60 points
+   delivery01 100.0% * 10 points = 10.00 points
+   delivery02 100.0% * 10 points = 10.00 points
+                          total:   38.35 out of 40 = 95.88% which is an A
+
+Keep up the great work, you three!
