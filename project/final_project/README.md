@@ -4,7 +4,7 @@
 
 ### alias.h
 
-The functions save_alias(char* name, char* value) and unsave_alias(char* name) were added for our new functionality. These names were chosen because they follow the alias-unalias naming scheme and reflect the 'saving' of the aliases
+The functions `save_alias(char* name, char* value)` and `unsave_alias(char* name)` were added for our new functionality. These names were chosen because they follow the alias-unalias naming scheme and reflect the 'saving' of the aliases
 
 `save_alias` adds an alias of format `name=value` to the `.bash_aliases` file.
 
