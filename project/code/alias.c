@@ -105,66 +105,70 @@ get_alias_value (name)
   return (alias ? alias->value : (char *)NULL);
 }
 
-
-void unsave_alias(char *name)
+/* Delete an alias from ~/.bash_aliases. */
+void 
+unsave_alias(name)
+      char *name;
 {
 
-    char existing_name[2048], existing_value[2048]; // larger than 2048 just use a bash function!
-    int alias_exists = 0;                           // bool
-    long size = 0;
+  char existing_name[2048], existing_value[2048]; // larger than 2048 just use a bash function!
+  int alias_exists = 0;                           // bool
+  long size = 0;
 
-    // Setup file names
-    char * homedir = getenv("HOME");
-    char old_alias_filename[55] = "", new_alias_filename [55] = "";
-    strcat(old_alias_filename, homedir);
-    strcat(old_alias_filename, "/.bash_aliases");
-    strcat(new_alias_filename, homedir);
-    strcat(new_alias_filename, "/.temp_aliases");
+  // Setup file names
+  char * homedir = getenv("HOME");
+  char old_alias_filename[55] = "", new_alias_filename [55] = "";
+  strcat(old_alias_filename, homedir);
+  strcat(old_alias_filename, "/.bash_aliases");
+  strcat(new_alias_filename, homedir);
+  strcat(new_alias_filename, "/.temp_aliases");
 
-    // Open files
-    FILE *alias_file = fopen(old_alias_filename, "r");
-    FILE *new_alias_file = fopen(new_alias_filename, "w");
-    
+  // Open files
+  FILE *alias_file = fopen(old_alias_filename, "r");
+  FILE *new_alias_file = fopen(new_alias_filename, "w");
+  
 
-    if (alias_file == NULL)
-    {
-        // unable to open :(
-        alias_file = fopen(old_alias_filename, "w");
-        if (alias_file == NULL)
-        {
-            //recovery failed (we tried!)
-            fprintf(stderr, "Error opening .bash_aliases file\n");
-            return;
-        }
-        fclose(alias_file);
-        alias_file = fopen(old_alias_filename, "r");
-    }
-    if(new_alias_file == NULL)
-    {
-        fprintf(stderr, "Error opening .temp_aliases file\n");
-        return;
-    }
+  if (alias_file == NULL)
+  {
+      // unable to open :(
+      alias_file = fopen(old_alias_filename, "w");
+      if (alias_file == NULL)
+      {
+          //recovery failed (we tried!)
+          fprintf(stderr, "Error opening .bash_aliases file\n");
+          return;
+      }
+      fclose(alias_file);
+      alias_file = fopen(old_alias_filename, "r");
+  }
+  if(new_alias_file == NULL)
+  {
+      fprintf(stderr, "Error opening .temp_aliases file\n");
+      return;
+  }
 
-    while (fscanf(alias_file, "alias %[^=]=%[^\n]\n", existing_name, existing_value) != EOF)
-    {
-        
-        if (strcmp(name, existing_name) != 0)
-        {
-            // write to temp file if not the alias to be removed
-            fprintf(new_alias_file, "alias %s=%s\n", existing_name, existing_value);
-        }
-    }
+  while (fscanf(alias_file, "alias %[^=]=%[^\n]\n", existing_name, existing_value) != EOF)
+  {
+      
+      if (strcmp(name, existing_name) != 0)
+      {
+          // write to temp file if not the alias to be removed
+          fprintf(new_alias_file, "alias %s=%s\n", existing_name, existing_value);
+      }
+  }
 
-    fseek(new_alias_file, 0, SEEK_END);
-    fclose(alias_file);
-    fclose(new_alias_file);
+  fseek(new_alias_file, 0, SEEK_END);
+  fclose(alias_file);
+  fclose(new_alias_file);
 
-    remove(old_alias_filename);
-    rename(new_alias_filename, old_alias_filename);
+  remove(old_alias_filename);
+  rename(new_alias_filename, old_alias_filename);
 }
 
-
-void save_alias(char *name, char *value)
+/* Save the new alias to ~/.bash_aliases. */
+void 
+save_alias(name, value)
+      char *name, *value;
 {
 
     char existing_name[2048], existing_value[2048]; // larger than 2048 just use a bash function!

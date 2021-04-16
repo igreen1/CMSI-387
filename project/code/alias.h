@@ -54,6 +54,7 @@ extern void add_alias PARAMS((char *, char *));
 /* Save the new alias to ~/.bash_aliases. */
 extern void save_alias PARAMS((char *, char *));
 
+/* Delete an alias from ~/.bash_aliases. */
 extern void unsave_alias PARAMS((char *));
 
 /* Remove the alias with name NAME from the alias list.  Returns
