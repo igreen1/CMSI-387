@@ -117,7 +117,7 @@ unsave_alias(name)
 
   // Setup file names
   char * homedir = getenv("HOME");
-  char old_alias_filename[55] = "", new_alias_filename [55] = "";
+  char old_alias_filename[56] = "", new_alias_filename [56] = "";
   strcat(old_alias_filename, homedir);
   strcat(old_alias_filename, "/.bash_aliases");
   strcat(new_alias_filename, homedir);
@@ -177,7 +177,7 @@ save_alias(name, value)
 
     // Setup file names
     char * homedir = getenv("HOME");
-    char old_alias_filename[55] = "", new_alias_filename [55] = "";
+    char old_alias_filename[56] = "", new_alias_filename [56] = "";
     strcat(old_alias_filename, homedir);
     strcat(old_alias_filename, "/.bash_aliases");
     strcat(new_alias_filename, homedir);
