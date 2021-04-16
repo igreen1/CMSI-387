@@ -50,7 +50,7 @@ This compile was clocked at approx. 3 hours. It started at 11:45pm and was finis
 - The make/make install was repeated a few times, and on the 4th try it worked (weird!)
 - We investigated the `alias` and `hash` data structures to determine data flows in the command. 
 - After continuing to face issues with compilation, we moved to compiling bash to a different location, rather than trying to replace the bash running in 'terminal' (this is better practice anyways)
-- After being able to test our changes, we moved to seperation of concerns for our programming
+- After being able to test our changes, we moved to developing our algorithm separately for simplicity.
 
 ### Algorithm development 
 Working without the bash terminal, we developed our `save_aliases` and `unsave_aliases` functions by passing in custom strings.
