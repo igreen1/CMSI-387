@@ -32,7 +32,7 @@ Moreover, the `sflag` variable was added. `sflag` is `0` by default and is set t
 
 @igreen1 's machine was used for compilation as their laptop is relatively powerful and has a large amount of space for the kernal compilation. 12 cores and 14GB of ram were dedicated to the first compile. This compile followed the instructions found on [@bjohnson05 website](https://bjohnson.lmu.build/cmsi387web/osproject.html). It was successful with no edits to the standard compilation path (rare so many thanks to luck on that one)
 
-This compile was clocked at approx. 3 hours. It started at 11:45pm and was finished by 3:00am. It may have finished sooner, however. @igreen1 did not time this and only coincidentally woke up.
+This compile was clocked at approx. 3 hours. It started at 11:45pm and was finished by 3:00am. It may have finished sooner. @igreen1 did not time this and only coincidentally woke up.
 
 ### Second Kernel Compile
 
