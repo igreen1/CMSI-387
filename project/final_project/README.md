@@ -79,6 +79,11 @@ Working without the bash terminal, we developed our `save_aliases` and `unsave_a
 - Armed with this knowledge, the issue was obvious. `delete_alias` was called before `unsave_alias`. `unsave_alias` took as an argument `alias->name`. `alias` was deleted in `delete_alias` though, forcing `unsave_alias` to reference previously freed memory. This had two solutions. Either `strcpy` the information first. Or, the easier solution, we moved `unsave_alias` before `delete_alias`. 
 - There is an edge case where the program could crash after the alias is removed from `.bash_aliases` but not `unaliased` yet. But, in this crash, the Bash shell probably crashes too, so the permanent effect is the only one that matters.
 - We began edge test casing, and it worked!!!
+- We spent ~1 hour reading the documentation on bash internals and `internal_getopt` to get options from CLI.
+- We added 's' to the available options for a command.
+- We added a `case 's'` for our command and within the case set `sflag = 1`. Then we wrapped our `unsave_alias` and `save_alias` in conditionals based on `sflag`.
+- We had some weird issues before realizing, we forgot to `break;`! After that, shockingly smooth sailing.
+- We learned reading the docs beforehand is amazing and very helpful! Ha
 
 
 ### Primary issues
