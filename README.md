@@ -9,7 +9,7 @@ Note: the parameters for configure are generally optional. For more details, see
 
 To test out our code without messing with your own bash, you can configure with a path parameter: `./configure --prefix=PATH_TO_INSTALL_LOC`. Then, `make` and `make install` like usual. This will install an executable `bash` at `PATH_TO_INSTALL_LOC/bin`. Simply `cd` to the directory and run `./bash` to change to our bash project! 
 
-We recommend running our bash separately from your system default terminal as attempting to affect bash while running it produces unexpected results. Therefore, you will need to build a separate bash, run the make from the separate bash as root, then open your system default terminal to view the changes. In general, this process is less safe.
+We recommend running our bash separately from your system default terminal as attempting to affect bash while running it produces unexpected results. 
 
 ## Running our project
 Anytime you wish to permanently add an alias to your `.bash_aliases`, simply add a `-s` parameter to your `alias` command.
