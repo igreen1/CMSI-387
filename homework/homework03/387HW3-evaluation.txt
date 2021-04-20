@@ -1,0 +1,38 @@
+
+Evaluation for Homework 3
+CMSI 387 - Operating Systems
+============================
+
+Question 1: dining philosophers program:   19.00 out of 20 possible
+Question 2: why immune explanation     :   10.00 out of 10 possible
+Question 3: file processing "C" program:   18.00 out of 20 possible
+Question 4: mmap program "C" program   :   20.00 out of 20 possible
+Question 5: appropriate class explained:   10.00 out of 10 possible
+
+Total possible points:     80.00 points
+           your score:     77.00 points
+                total:     77.00/80.00 = 96.25% which is an A
+
+Comments:
+---------
+
+Nice work!  Just a couple of comments:
+
+Your dining phil program works, but gave me 4 compiler warnings which you
+should have tracked down so it would produce a "clean" compilation.  Still,
+you earn nearly full credit.
+
+Your problem 3 was supposed to have been done in "C" *NOT* in C++.  It works
+so you earn nearly full credit.
+
+Excellent thinking to put the text files for question 4 into a zip!  Thx!
+
+==============
+SEMESTER SO FAR, COMING UP TO FINAL EXAM:
+   homework01:  10.5/12 =  87.50% of 10 pts =  8.75 pts
+   homework02:  97  /97 = 100.00% of 10 pts = 10.00 pts
+   homework03:  77  /80 =  96.25% of 10 pts =  9.63 pts
+        total:                              28.38 pts out of 30.00
+                        which is 95.60% which is an A
+
+Very good work!!
